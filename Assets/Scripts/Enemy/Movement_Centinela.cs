@@ -14,9 +14,12 @@ public class Movement_Centinela : MonoBehaviour
     private bool isAlert;
     public bool move;
 
+    private Vector3 positionOrigin;
+
     private void Start()
     {
         move = true;
+        positionOrigin = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
     }
 
     private void Update()
@@ -28,6 +31,10 @@ public class Movement_Centinela : MonoBehaviour
             //transform.LookAt(positionObjetive);
             Rotar();
             transform.position = Vector3.MoveTowards(transform.position, positionObjetive, movementSpeed * Time.deltaTime);
+        }
+        else if (isAlert == false && move)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, positionOrigin, movementSpeed * Time.deltaTime);
         }
     }
 

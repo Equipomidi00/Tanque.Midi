@@ -152,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &579013027
 Mesh:
@@ -393,7 +393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 390a3ccd9b16c564fbe6b755e0d649d0, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 390a3ccd9b16c564fbe6b755e0d649d0, type: 3}
       propertyPath: m_LocalScale.x
@@ -2261,7 +2261,7 @@ MonoBehaviour:
   layerObjetive:
     serializedVersion: 2
     m_Bits: 8
-  movementSpeed: 15
+  movementSpeed: 8
   move: 1
 --- !u!114 &1309823891
 MonoBehaviour:
