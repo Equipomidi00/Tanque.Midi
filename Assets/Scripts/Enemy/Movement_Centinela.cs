@@ -2,40 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* Descripcion:
- * Se encarga de rotar al objeto que lo contega,
- * segun la posicion de un objetivo asignado.
- */
-public class RotarSegunObjetivo : MonoBehaviour
+public class Movement_Centinela : MonoBehaviour
 {
     [Header("Set Objetive")]
     [SerializeField] private Transform objetive;
-    [SerializeField] private bool isCenitnella;
 
     [Header("Set Centinella")]
     [SerializeField] private float alertRange;
     [SerializeField] private LayerMask layerObjetive;
     [SerializeField] private float movementSpeed;
     private bool isAlert;
+    public bool move;
+
+    private void Start()
+    {
+        move = true;
+    }
 
     private void Update()
     {
-        if (isCenitnella)
+        isAlert = Physics.CheckSphere(transform.position, alertRange, layerObjetive);
+        if (isAlert && move)
         {
-            isAlert = Physics.CheckSphere(transform.position, alertRange, layerObjetive);
-            if (isAlert)
-            {
-                Vector3 positionObjetive = new Vector3 (objetive.position.x, transform.position.y, objetive.position.z);
-                //transform.LookAt(positionObjetive);
-                Rotar();
-                transform.position = Vector3.MoveTowards(transform.position, positionObjetive, movementSpeed * Time.deltaTime);
-            }
-        }
-        else
-        {
-            Vector3 positionObjetive = new Vector3 (objetive.position.x, transform.position.y, objetive.position.z);
-            transform.position = Vector3.MoveTowards(transform.position, positionObjetive, movementSpeed * Time.deltaTime);
+            Vector3 positionObjetive = new Vector3(objetive.position.x, transform.position.y, objetive.position.z);
+            //transform.LookAt(positionObjetive);
             Rotar();
+            transform.position = Vector3.MoveTowards(transform.position, positionObjetive, movementSpeed * Time.deltaTime);
         }
     }
 
@@ -52,7 +44,7 @@ public class RotarSegunObjetivo : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, alertRange);
     }
 }
