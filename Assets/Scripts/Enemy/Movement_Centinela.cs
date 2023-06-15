@@ -51,10 +51,9 @@ public class Movement_Centinela : MonoBehaviour
     }
     private void RotarRetorno()
     {
-        Vector3 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);                    //toma posicion del jugador.
-        
+        Vector3 positionActuality = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 
-        Vector3 direction = positionOrigin - positionOnScreen;                                           //calcula el vector o la distancia entre ambos puntos.
+        Vector3 direction = positionOrigin - positionActuality;                                           //calcula el vector o la distancia entre ambos puntos.
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90.0f;                        //calcula los radianes y lo cmobierte a angulo.
 
         transform.rotation = Quaternion.Euler(0, -angle, 0);
