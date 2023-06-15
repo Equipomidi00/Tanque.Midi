@@ -34,6 +34,7 @@ public class Movement_Centinela : MonoBehaviour
         }
         else if (isAlert == false && move)
         {
+            RotarRetorno();
             transform.position = Vector3.MoveTowards(transform.position, positionOrigin, movementSpeed * Time.deltaTime);
         }
     }
@@ -47,6 +48,16 @@ public class Movement_Centinela : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90.0f;                        //calcula los radianes y lo cmobierte a angulo.
 
         transform.rotation = Quaternion.Euler(0, -angle, 0);                                                 //Modifica la rotacion.
+    }
+    private void RotarRetorno()
+    {
+        Vector3 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);                    //toma posicion del jugador.
+        
+
+        Vector3 direction = positionOrigin - positionOnScreen;                                           //calcula el vector o la distancia entre ambos puntos.
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90.0f;                        //calcula los radianes y lo cmobierte a angulo.
+
+        transform.rotation = Quaternion.Euler(0, -angle, 0);
     }
 
     private void OnDrawGizmos()
