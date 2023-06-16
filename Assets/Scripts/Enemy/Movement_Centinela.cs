@@ -45,7 +45,7 @@ public class Movement_Centinela : MonoBehaviour
         Vector3 objetiveOneScreen = (Vector2)Camera.main.WorldToViewportPoint(objetive.position);           //toma posicion del objetivo.
 
         Vector3 direction = objetiveOneScreen - positionOnScreen;                                           //calcula el vector o la distancia entre ambos puntos.
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90.0f;                        //calcula los radianes y lo cmobierte a angulo.
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90.0f;                        //calcula los radianes y lo cmobierte a angulo.
 
         transform.rotation = Quaternion.Euler(0, -angle, 0);                                                 //Modifica la rotacion.
     }
@@ -54,7 +54,7 @@ public class Movement_Centinela : MonoBehaviour
         Vector3 positionActuality = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 
         Vector3 direction = positionOrigin - positionActuality;                                           //calcula el vector o la distancia entre ambos puntos.
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90.0f;                        //calcula los radianes y lo cmobierte a angulo.
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90.0f;                        //calcula los radianes y lo cmobierte a angulo.
 
         transform.rotation = Quaternion.Euler(0, -angle, 0);
     }
