@@ -5,6 +5,8 @@ using UnityEngine;
 public class LifeSystem : MonoBehaviour
 {
     [SerializeField] private float life;
+    [SerializeField] private GameObject MenuGameOver;
+
     [Header("Game object que contiene el escript Destroy")]
     public Destroy destroid;
 
@@ -14,6 +16,7 @@ public class LifeSystem : MonoBehaviour
         if (life <= 0)
         {
             destroid.destroid = true;
+            MenuGameOver.SetActive(true);
         }
     }
 }
