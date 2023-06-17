@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 20
+  MenuGameOver: {fileID: 0}
   destroid: {fileID: 2042295606}
 --- !u!54 &441501461
 Rigidbody:
@@ -2441,6 +2442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
+  MenuGameOver: {fileID: 0}
   destroid: {fileID: 0}
 --- !u!65 &1146739541
 BoxCollider:
@@ -2498,7 +2500,7 @@ Transform:
   m_Children:
   - {fileID: 1873380992}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1309641227
 PrefabInstance:
@@ -2509,7 +2511,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a889c95c3b8d2944ab7b2fd25688928c, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a889c95c3b8d2944ab7b2fd25688928c, type: 3}
       propertyPath: m_LocalScale.x
