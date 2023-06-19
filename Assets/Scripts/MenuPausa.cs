@@ -54,5 +54,6 @@ public class MenuPausa : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Saliendo...");
+        SceneManager.LoadScene(0);
     }
 }
