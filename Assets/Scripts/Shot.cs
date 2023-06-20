@@ -6,7 +6,6 @@ public class Shot : MonoBehaviour
 {
     [SerializeField] Transform controllerShot;
     [SerializeField] GameObject bullet;
-    public float targetTime = 2.0f;
 
     private void Update()
     {
