@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false; //Ocultra
         cantidadDeNucleos = GameObject.FindGameObjectsWithTag("Nucleo").Length; //Busca todos los game objects que tengan ese tag
     }
 
