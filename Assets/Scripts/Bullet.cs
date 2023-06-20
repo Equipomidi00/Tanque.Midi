@@ -27,5 +27,11 @@ public class Bullet : MonoBehaviour
             other.GetComponent<LifeSystem>().SetLife(damage);
             Destroy(gameObject);
         }
+
+        else if (other.CompareTag("Nucleo"))
+        {
+            other.GetComponent<Nucleo>().SetLife(damage);
+            Destroy(gameObject);
+        }
     }
 }

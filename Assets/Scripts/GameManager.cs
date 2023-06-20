@@ -5,25 +5,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
-    public int PuntosTotales {get {return puntosTotales; }}
-    private int puntosTotales;
+    [SerializeField] private int cantidadDeNucleos;
+    [SerializeField] private int nucleosEliminados;
+    [SerializeField] private GameObject MenuWiner;
 
-    private void Awake()
+    private void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Debug.Log("Hay otra GameManager");
-        }
+        cantidadDeNucleos = GameObject.FindGameObjectsWithTag("Nucleo").Length; //Busca todos los game objects que tengan ese tag
     }
 
-    public void SumarPuntos(int puntosASumar)
+    public void ActivarWin()
     {
-        puntosTotales += puntosASumar;
+        MenuWiner.SetActive(true);
     }
 
+    public void NucleosEliminados()
+    {
+        nucleosEliminados += 1;
+
+        if (nucleosEliminados == cantidadDeNucleos)
+        {
+            ActivarWin();
+        }
+    }
 }
