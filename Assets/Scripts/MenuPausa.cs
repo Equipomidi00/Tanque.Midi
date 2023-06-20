@@ -17,10 +17,12 @@ public class MenuPausa : MonoBehaviour
             if (juegoPausado)
             {
                 Reanudar();
+                Cursor.visible = false; //Ocultra
             }
             else
             {
                 Pausa();
+                Cursor.visible = true; //Ocultra
             }
         }
     }
