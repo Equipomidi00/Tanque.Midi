@@ -15,6 +15,7 @@ public class LifeSystem : MonoBehaviour
         life -= damage;
         if (life <= 0)
         {
+            Cursor.visible = true;
             destroid.destroid = true;
             MenuGameOver.SetActive(true);
         }
