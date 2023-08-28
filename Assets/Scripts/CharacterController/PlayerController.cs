@@ -14,8 +14,9 @@ public class PlayerController : MonoBehaviour
     private float fallVelocity;
     private Vector3 playerInput;
     
-    public float playerSpeed;
-    public float mass;
+    [SerializeField] private float playerSpeed;
+    [SerializeField] private float mass;
+    [SerializeField] private float jumpForce;
 
     private Vector3 camForward;
     private Vector3 camRigth;
@@ -34,6 +35,8 @@ public class PlayerController : MonoBehaviour
         MoveController();
 
         SetGravity();
+
+        Jump();
 
         player.Move(movePlayerCam * Time.deltaTime);
     }
@@ -80,4 +83,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void Jump()
+    {
+        if (player.isGrounded && Input.GetButtonDown("Jump"))
+        {
+            fallVelocity = jumpForce;
+            movePlayerCam.y = fallVelocity;
+        }
+    }
 }
