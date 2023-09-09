@@ -27,9 +27,9 @@ public class Movement_Centinela : MonoBehaviour
         isAlert = Physics.CheckSphere(transform.position, alertRange, layerObjetive);
         if (isAlert && move)
         {
+            //Rotar();
             Vector3 positionObjetive = new Vector3(objetive.position.x, transform.position.y, objetive.position.z);
-            //transform.LookAt(positionObjetive);
-            Rotar();
+            transform.LookAt(positionObjetive);
             transform.position = Vector3.MoveTowards(transform.position, positionObjetive, movementSpeed * Time.deltaTime);
         }
         else if (isAlert == false && move)

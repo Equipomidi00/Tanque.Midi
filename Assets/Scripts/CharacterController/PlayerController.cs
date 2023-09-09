@@ -1,19 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header ("Game Objects")]
+    [Tooltip("Player busca el componente de character controller dentro del player. Se asigna de forma automatica.")]
     public CharacterController player;
     public Camera mainCamera;
 
-    [SerializeField] private float playerSpeed;
+    [Header ("Set the value of the character")]
     [SerializeField] private float mass;
+    [SerializeField] private float playerSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float slideVlocity;
     [SerializeField] private float slopeForceDown;
     [SerializeField] private bool isOnSlope = false;
+
+    [Tooltip ("Para seleccionar un estilo de movimiento, primero debe de seleccionar el que se encuentre activado, luego podrá selecciona el que desee probar.")]
+    [Header ("Movement Style")]
+    [SerializeField] private bool movementStyle1;
+    [SerializeField] private bool movementStyle2;
 
     private Vector3 playerInput;
     private Vector3 camForward;
@@ -54,12 +63,24 @@ public class PlayerController : MonoBehaviour
 
         playerInput = new Vector3(horizontalMove, 0, verticalMove);
         playerInput = Vector3.ClampMagnitude(playerInput, 1); //De esta forma mantendra la misma velocidad incluso si el jugador se mueve en diagonal.
-        Debug.Log(player.velocity.magnitude);
 
         CamDirection();
 
         movePlayerCam = (playerInput.x * camRigth + playerInput.z * camForward) * playerSpeed; // De esta forma, se movera con respecto a la camara. Lo multiplicamos por player speed para que no afecte a la velocidad en y.
-        player.transform.LookAt(player.transform.position + movePlayerCam); //Rota al player en la dirección que se mueve.
+        
+        if (movementStyle1)
+        {
+            movementStyle2 = false;
+            player.transform.LookAt(player.transform.position + camForward); //Rota al player en la dirección que se mueve.
+        }
+
+        if (movementStyle2)
+        {
+            movementStyle1 = false;
+            player.transform.LookAt(player.transform.position + movePlayerCam); //Rota al player en la dirección que se mueve. Rota al avatar al precionar una tecla horizontal.
+        }
+
+        Debug.Log(player.velocity.magnitude);
     }
 
     private void CamDirection()

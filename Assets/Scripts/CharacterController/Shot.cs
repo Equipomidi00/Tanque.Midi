@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
+    [Tooltip ("Es desde donde see va a disparar la bullet")]
     [SerializeField] Transform controllerShot;
     [SerializeField] GameObject bullet;
 

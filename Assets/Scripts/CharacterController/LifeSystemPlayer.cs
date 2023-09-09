@@ -6,8 +6,7 @@ using UnityEngine;
  Este sistema de vide esta diseñado 
 para el avatar del jugador.
  */
-
-public class LifeSystem : MonoBehaviour
+public class LifeSystemPlayer : MonoBehaviour
 {
     [SerializeField] private float life;
     [SerializeField] private GameObject MenuGameOver;
