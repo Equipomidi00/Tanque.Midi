@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
             player.transform.LookAt(player.transform.position + movePlayerCam); //Rota al player en la dirección que se mueve. Rota al avatar al precionar una tecla horizontal.
         }
 
-        Debug.Log(player.velocity.magnitude);
+        //Debug.Log(player.velocity.magnitude);
     }
 
     private void CamDirection()

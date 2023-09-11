@@ -39,5 +39,7 @@ public class Bullet : MonoBehaviour
             other.GetComponent<Nucleo>().SetLife(damage);
             Destroy(gameObject);
         }
+
+        Destroy(gameObject);
     }
 }
