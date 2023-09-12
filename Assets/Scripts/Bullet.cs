@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float damage;
-    private float targetTime = 0.80f;
+    private float targetTime = 2f;
 
     void Update()
     {
@@ -22,9 +22,9 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.tag == "Enemy")
         {
-            other.GetComponent<LifeSystem>().SetLife(damage);
+            other.GetComponent<LifeSystemEnemy>().SetLife(damage);
             Destroy(gameObject);
         }
 

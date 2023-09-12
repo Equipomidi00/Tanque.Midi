@@ -44,6 +44,7 @@ public class GravisController : MonoBehaviour
 
     private void Start()
     {
+        sleep = true;   
         initChaseTarget = false;
         canShot = true;
         saveTimer = timer;
@@ -52,13 +53,20 @@ public class GravisController : MonoBehaviour
     private void Update()
     {
         //Check for sight and attack range.
-        targetInSightRange = Physics.CheckSphere(this.transform.position, sightRange, whatIsTarget);
+       // targetInSightRange = Physics.CheckSphere(this.transform.position, sightRange, whatIsTarget);
         targetInAttackRange = Physics.CheckSphere(this.transform.position, attackRange, whatIsTarget);
 
-        ChaseTarget();
+       // ChaseTarget();
 
-        if (targetInSightRange && targetInAttackRange)
+        if (targetInAttackRange)
         {
+            sleep = false;
+        }
+
+        if (!sleep)
+        {
+            agent.destination = target.position;
+
             if (canShot)
             {
                 AttackTarget();
