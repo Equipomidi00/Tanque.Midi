@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8303256657301012164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.27, z: 0}
-  m_LocalScale: {x: 1, y: 1.6648, z: 1}
+  m_LocalPosition: {x: 0, y: 1.126, z: 0}
+  m_LocalScale: {x: 1, y: 3.3778794, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8303256657393126992}
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 8303256657393126996}
   - component: {fileID: 8303256657393126997}
   - component: {fileID: 8303256657393126998}
+  - component: {fileID: 744947223419865474}
   m_Layer: 0
   m_Name: Mortems
   m_TagString: Enemy
@@ -184,7 +185,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8303256657393127004}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 5.6910005, z: 1}
@@ -205,3 +206,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &744947223419865474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303256657393127004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c243ce497ab2f498ef6cc02032b615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20

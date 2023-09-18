@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Damage : MonoBehaviour
+public class GravisDamage : MonoBehaviour
 {
     [SerializeField] private float damage;
 
@@ -12,7 +12,6 @@ public class Damage : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<LifeSystemPlayer>().SetLife(damage);
-            Destroy(gameObject);
         }
     }
 }
