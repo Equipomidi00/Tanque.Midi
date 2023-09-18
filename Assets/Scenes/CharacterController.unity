@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43228
+  m_Name: pb_Mesh219492
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24040,6 +24040,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1782297098344313715, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782297098344313715, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1789146606}
@@ -24047,6 +24051,18 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1963635807}
+    - target: {fileID: 1782297098344313720, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782297098344313721, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782297098344313721, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.92
+      objectReference: {fileID: 0}
     - target: {fileID: 1782297098344313725, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -24091,7 +24107,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1782297098344313726, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
+      propertyPath: life
+      value: 100
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1782297098344313723, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4641e72b3b719b46a3a36bcf7ba85e1, type: 3}
 --- !u!1001 &5894784807970881668
 PrefabInstance:
