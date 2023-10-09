@@ -15,7 +15,7 @@ public class Nucleo : MonoBehaviour
         if (life <= 0)
         {
             Destroy(gameObject);
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().NucleosEliminados();
+            GameObject.FindGameObjectWithTag("GameMansager").GetComponent<GameManager>().NucleosEliminados();
         }
     }
 }

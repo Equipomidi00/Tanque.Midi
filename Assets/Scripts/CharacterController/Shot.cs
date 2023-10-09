@@ -12,6 +12,8 @@ public class Shot : MonoBehaviour
     [SerializeField] private bool canShot;
     private float saveTimer;
 
+    public GameObject vfx;
+
     private void Start()
     {
         canShot = true;
@@ -34,7 +36,9 @@ public class Shot : MonoBehaviour
 
     public void ShotBullet()
     {
-        Instantiate(bullet, controllerShot.position, controllerShot.rotation); 
+        Instantiate(bullet, controllerShot.position, controllerShot.rotation);
+        vfx.transform.position = controllerShot.position;
+        vfx.SetActive(true);
     }
 
     void Timer()
@@ -43,6 +47,7 @@ public class Shot : MonoBehaviour
 
         if (timer <= 0)
         {
+             vfx.SetActive(false);
             timer = saveTimer;
             canShot = true;
         }

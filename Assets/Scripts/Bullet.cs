@@ -8,6 +8,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float damage;
     private float targetTime = 2f;
 
+    public GameObject vfx;
+
+
     void Update()
     {
         transform.Translate(Vector3.fwd * speed * Time.deltaTime);
@@ -24,12 +27,16 @@ public class Bullet : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
+            vfx.transform.position = this.transform.position;
             other.GetComponent<LifeSystemEnemy>().SetLife(damage);
+            vfx.SetActive (true);
             Destroy(gameObject);
         }
 
         if (other.CompareTag("Nucleo"))
         {
+            vfx.transform.position = this.transform.position;
+            vfx.SetActive(true);
             other.GetComponent<Nucleo>().SetLife(damage);
             Destroy(gameObject);
         }
@@ -37,6 +44,7 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<Nucleo>().SetLife(damage);
+            vfx.SetActive(true);
             Destroy(gameObject);
         }
 
