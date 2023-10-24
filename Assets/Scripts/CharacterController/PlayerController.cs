@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         SetGravity();
 
-        Jump();
+        //Jump();
 
         player.Move(movePlayerCam * Time.deltaTime);
     }

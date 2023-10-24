@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -10,10 +9,9 @@ public class Bullet : MonoBehaviour
 
     public GameObject vfx;
 
-
     void Update()
     {
-        transform.Translate(Vector3.fwd * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
         targetTime -= Time.deltaTime;
         if (targetTime <= 0.0f)
@@ -28,7 +26,11 @@ public class Bullet : MonoBehaviour
         if (other.tag == "Enemy")
         {
             vfx.transform.position = this.transform.position;
-            other.GetComponent<LifeSystemEnemy>().SetLife(damage);
+            if (other!= null)
+            {
+                other.GetComponent<LifeSystemEnemy>().SetLife(damage);
+
+            }
             vfx.SetActive (true);
             Destroy(gameObject);
         }

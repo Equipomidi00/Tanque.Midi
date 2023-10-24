@@ -19,10 +19,16 @@ public class ThirdPersonCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position + offset, lerp); //La camara se posiciona en donde esta el player.
+        if(player!= null){
 
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * mousSensitivity, Vector3.up) * offset; //Funcion de rotacion con el mouse en el eje X.
+            this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position + offset, lerp); //La camara se posiciona en donde esta el player.
 
-        this.transform.LookAt(player.transform); //Se mantiene mirando al player.
+            offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * mousSensitivity, Vector3.up) * offset; //Funcion de rotacion con el mouse en el eje X.
+
+            this.transform.LookAt(player.transform); //Se mantiene mirando al player.
+
+        } 
+
     }
+
 }

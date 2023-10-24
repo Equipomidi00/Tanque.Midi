@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5894784809420289397}
   - component: {fileID: 5894784809420289386}
-  - component: {fileID: 5894784809420289396}
   - component: {fileID: 5894784809420289398}
   m_Layer: 0
   m_Name: Main Camera
@@ -26,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5894784808989274525}
+  serializedVersion: 2
   m_LocalRotation: {x: -0.0050788266, y: 0.810635, z: -0.0066931266, w: -0.5854916}
   m_LocalPosition: {x: -11.4227295, y: 3.2750359, z: 5.069031}
   m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5894784809420289386
 Camera:
@@ -48,9 +47,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -77,14 +84,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5894784809420289396
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5894784808989274525}
-  m_Enabled: 1
 --- !u!114 &5894784809420289398
 MonoBehaviour:
   m_ObjectHideFlags: 0

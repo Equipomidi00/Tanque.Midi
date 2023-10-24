@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Shot : MonoBehaviour
 {
@@ -11,8 +10,16 @@ public class Shot : MonoBehaviour
     [SerializeField] private float timer;
     [SerializeField] private bool canShot;
     private float saveTimer;
-
+    
     public GameObject vfx;
+
+    [Tooltip("Efectos de sonido")]
+
+    [SerializeField] AudioMixer audioMixer;
+    [SerializeField] AudioMixerGroup audioMixerGroup;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip Clip;
+    private bool corrutina_activa = false;
 
     private void Start()
     {
@@ -25,7 +32,13 @@ public class Shot : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && canShot)
         {
             canShot = false;
+ 
+            audioSource.clip = Clip;
+
+            StartCoroutine(ReproducirSonido());
+
             ShotBullet();
+
         }
 
         if (canShot == false)
@@ -47,9 +60,30 @@ public class Shot : MonoBehaviour
 
         if (timer <= 0)
         {
-             vfx.SetActive(false);
+            vfx.SetActive(false);
             timer = saveTimer;
             canShot = true;
+            corrutina_activa = false;
         }
     }
+
+    IEnumerator ReproducirSonido()
+    {
+        if (!corrutina_activa) {
+            
+            audioSource.Play();
+            corrutina_activa = true;
+
+        }
+        else
+        {
+
+            corrutina_activa = false;
+
+        }
+
+        yield return null;
+
+    }
+
 }

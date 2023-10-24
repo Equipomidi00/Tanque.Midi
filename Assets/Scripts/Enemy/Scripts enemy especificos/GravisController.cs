@@ -65,7 +65,10 @@ public class GravisController : MonoBehaviour
 
         if (!sleep)
         {
-            agent.destination = target.position;
+            if (agent!=null && target!=null)
+            {
+                agent.destination = target.position;
+            }
 
             if (canShot)
             {

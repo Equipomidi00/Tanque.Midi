@@ -16,6 +16,11 @@ public class MortemsController : MonoBehaviour
 
     private void Update()
     {
-        agent.destination = target.position;
+        if (agent != null) {
+            
+            agent.destination = target.position; 
+        
+        }
+        
     }
 }
