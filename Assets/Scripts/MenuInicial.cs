@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MenuInicial : MonoBehaviour
 {
     private void Start()
     {
         Cursor.visible = true;
     }
-    public void Jugar()
+    public void Jugar(string scena_nombre)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);       
+        SceneManager.LoadScene(scena_nombre);       
     }
 
     public void Salir()
