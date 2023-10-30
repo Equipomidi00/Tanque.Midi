@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LifeSystemPlayer : MonoBehaviour
 {
-    [SerializeField] private float life;
+    [SerializeField] public float life;
     [SerializeField] private float life_total;
 
     [Tooltip("Efecto de sonido")]
@@ -15,8 +15,6 @@ public class LifeSystemPlayer : MonoBehaviour
     [SerializeField] private AudioClip clipDano;
 
     [SerializeField] private Image barraVida;
-
-    [SerializeField] Canvas _canvas;
 
     private void Start()
     {
@@ -39,12 +37,6 @@ public class LifeSystemPlayer : MonoBehaviour
 
             Destroy(gameObject);
 
-            Time.timeScale = 1f;
-
-            Cursor.visible = true;
-
-            _canvas.gameObject.SetActive(true);
-
         }
     }
 
@@ -54,7 +46,7 @@ public class LifeSystemPlayer : MonoBehaviour
 
         audioSource.Play();
 
-        yield return new WaitWhile(()=>audioSource.isPlaying);
+        yield return new WaitWhile(() => audioSource.isPlaying);
 
     }
 

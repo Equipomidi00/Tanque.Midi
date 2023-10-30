@@ -10,8 +10,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int nucleosEliminados;
     [SerializeField] private GameObject MenuWiner;
     [SerializeField] private GameObject MenuPausa;
+    [SerializeField] private GameObject MenuDerrota;
+
+    [SerializeField] public LifeSystemPlayer _player;
+
     private bool juegoPausado = false;
     private bool juegoGanado = false;
+    private bool juegoPerdido = false;
 
     private void Start()
     {
@@ -21,18 +26,28 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (_player.life <= 0)
+        {
+            ActivarDerrota();
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (juegoPausado && juegoGanado == false)
+            if (juegoPausado)
             {
                 Reanudar();
                 Cursor.visible = false;
             }
             else
             {
-                Pausa();
-                Cursor.visible = true;
+                if (juegoGanado && juegoPerdido)
+                {
+
+                    Pausa();
+                    Cursor.visible = true;
+
+                }
+
             }
         }
     }
@@ -52,13 +67,20 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
 
     }
-
     public void ActivarWin()
     {
-        if (juegoPausado == false)
-        {
-            MenuWiner.SetActive(true);
-        }
+        MenuWiner.SetActive(true);
+        Time.timeScale = 0f;
+        juegoGanado = true;
+
+    }
+
+    public void ActivarDerrota()
+    {
+        MenuDerrota.SetActive(true);
+        Time.timeScale = 0f;
+        juegoPerdido = true;
+
 
     }
 
