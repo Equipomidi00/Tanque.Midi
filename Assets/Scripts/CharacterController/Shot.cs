@@ -15,7 +15,6 @@ public class Shot : MonoBehaviour
 
     [Tooltip("Efectos de sonido")]
 
-    [SerializeField] AudioMixer audioMixer;
     [SerializeField] AudioMixerGroup audioMixerGroup;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip Clip;
@@ -34,6 +33,8 @@ public class Shot : MonoBehaviour
             canShot = false;
  
             audioSource.clip = Clip;
+
+            audioSource.outputAudioMixerGroup = audioMixerGroup;
 
             StartCoroutine(ReproducirSonido());
 

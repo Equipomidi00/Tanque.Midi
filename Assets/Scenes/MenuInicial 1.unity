@@ -36365,6 +36365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gravis
       objectReference: {fileID: 0}
+    - target: {fileID: 9180785991227401353, guid: 67e7f6515a375f642b2f91d971b6ca92, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9180785991227401356, guid: 67e7f6515a375f642b2f91d971b6ca92, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -36422,7 +36426,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7257445930929562597, guid: 67e7f6515a375f642b2f91d971b6ca92, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e7f6515a375f642b2f91d971b6ca92, type: 3}

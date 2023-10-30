@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
-    [SerializeField] private GameObject botonPausa;
-    [SerializeField] private GameObject menuPausa;
-
     private bool juegoPausado = false;
+    public Canvas _canvas;
 
     private void Update()
     {
@@ -17,45 +13,29 @@ public class MenuPausa : MonoBehaviour
             if (juegoPausado)
             {
                 Reanudar();
-                Cursor.visible = false; //Ocultra
+                Cursor.visible = false;
             }
             else
             {
                 Pausa();
-                Cursor.visible = true; //Ocultra
+                Cursor.visible = true; 
             }
         }
     }
 
     public void Pausa()
     {
+        _canvas.gameObject.SetActive(true);   
         juegoPausado = true;
         Time.timeScale = 0f;
 
-        botonPausa.SetActive(false);
-        menuPausa.SetActive(true);
     }
 
     public void Reanudar()
     {
+        _canvas.gameObject.SetActive(false);
         juegoPausado = false;
         Time.timeScale = 1f;
 
-        botonPausa.SetActive(true);
-        menuPausa.SetActive(false);
-    }
-
-    public void Reiniciar()
-    {
-        juegoPausado = false;
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void Salir()
-    {
-        Application.Quit();
-        Debug.Log("Saliendo...");
-        SceneManager.LoadScene(0);
     }
 }
