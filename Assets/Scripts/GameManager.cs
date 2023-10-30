@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         MenuPausa.gameObject.SetActive(true);
         juegoPausado = true;
         Time.timeScale = 0f;
+        Cursor.visible = true;
 
     }
 
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
         MenuPausa.gameObject.SetActive(false);
         juegoPausado = false;
         Time.timeScale = 1f;
+        Cursor.visible = true;
 
     }
     public void ActivarWin()
@@ -72,7 +74,7 @@ public class GameManager : MonoBehaviour
         MenuWiner.SetActive(true);
         Time.timeScale = 0f;
         juegoGanado = true;
-
+        Cursor.visible = true;
     }
 
     public void ActivarDerrota()
@@ -80,7 +82,7 @@ public class GameManager : MonoBehaviour
         MenuDerrota.SetActive(true);
         Time.timeScale = 0f;
         juegoPerdido = true;
-
+        Cursor.visible = true;
 
     }
 
