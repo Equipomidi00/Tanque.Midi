@@ -5,10 +5,11 @@ public class MenuPausa : MonoBehaviour
 {
     private bool juegoPausado = false;
     public Canvas _canvas;
+    public Canvas winCanvas;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)&& winCanvas==false)
         {
             if (juegoPausado)
             {
