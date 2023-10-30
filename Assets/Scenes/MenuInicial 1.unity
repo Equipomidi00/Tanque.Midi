@@ -6076,10 +6076,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 676427256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.29679167, y: 0.7555549}
-  m_AnchorMax: {x: 0.6898125, y: 0.965162}
-  m_AnchoredPosition: {x: -423.5, y: -49}
-  m_SizeDelta: {x: -555, y: -88}
+  m_AnchorMin: {x: 0.7053542, y: 0.8304451}
+  m_AnchorMax: {x: 0.9754375, y: 0.9622583}
+  m_AnchoredPosition: {x: -153, y: -3}
+  m_SizeDelta: {x: -319, y: -4}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &402846291
 MonoBehaviour:
@@ -6166,7 +6166,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -853.4747, w: 0}
+  m_margin: {x: 0, y: 0, z: -310.6578, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7698,7 +7698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.29818735, g: 0, b: 0.6132076, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9955,7 +9955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2bd83ea9333e9db4bb48fb32ca245ac8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 522ea3adef2f7e64a8a6cf2c454efc19, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35383,7 +35383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.91533947, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -44008,10 +44008,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 676427256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.43852088, y: 0.6442963}
-  m_AnchorMax: {x: 0.5584376, y: 0.6897037}
-  m_AnchoredPosition: {x: 17, y: -0.5}
-  m_SizeDelta: {x: -32, y: 1}
+  m_AnchorMin: {x: 0.328875, y: 0.15937088}
+  m_AnchorMax: {x: 0.45356253, y: 0.21211265}
+  m_AnchoredPosition: {x: 18.799988, y: 3.0999756}
+  m_SizeDelta: {x: -42, y: -7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582134187
 MonoBehaviour:
@@ -44036,7 +44036,7 @@ MonoBehaviour:
   m_text: Volumen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 8b29aaa3eec7468097ff07adfcf29ac9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -44815,7 +44815,7 @@ RectTransform:
   m_GameObject: {fileID: 1652239800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 503526825}
@@ -44823,10 +44823,10 @@ RectTransform:
   - {fileID: 733673440}
   m_Father: {fileID: 676427256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.29679167, y: 0.55600005}
-  m_AnchorMax: {x: 0.71800005, y: 0.6442963}
-  m_AnchoredPosition: {x: -14.5, y: -1}
-  m_SizeDelta: {x: -651, y: -76}
+  m_AnchorMin: {x: 0.46300003, y: 0.15937088}
+  m_AnchorMax: {x: 0.7053542, y: 0.21211265}
+  m_AnchoredPosition: {x: -6.5, y: -1.5}
+  m_SizeDelta: {x: -308, y: -37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652239802
 MonoBehaviour:
@@ -50979,10 +50979,10 @@ RectTransform:
   - {fileID: 1906438620}
   m_Father: {fileID: 676427256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35300002, y: 0.069000006}
-  m_AnchorMax: {x: 0.63372934, y: 0.22211112}
-  m_AnchoredPosition: {x: 4.2521973, y: -19.50061}
-  m_SizeDelta: {x: -10.045227, y: 39.380707}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.16622917, y: 0.14259341}
+  m_AnchoredPosition: {x: 2.500122, y: 0.5}
+  m_SizeDelta: {x: -4.0512695, y: -1.4315948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007185139
 MonoBehaviour:
