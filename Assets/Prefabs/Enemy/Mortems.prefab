@@ -450,8 +450,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 9.091041, z: 1}
-  m_Center: {x: 0, y: 4.04552, z: 0}
+  m_Size: {x: 2.0754395, y: 10.452213, z: 2.1503906}
+  m_Center: {x: -0.0075683594, y: 4.726106, z: -0.020874023}
 --- !u!54 &8303256657393126998
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677a5c4c54a26344b9e9be2508178771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 20
   clipDano: {fileID: 8300000, guid: 17c6da967220e774283032b8725bb621, type: 3}
   clipMuerte: {fileID: 8300000, guid: 4810237c29eb9654394e328ab8df9978, type: 3}
   barraVida: {fileID: 1105022239591271909}
+  life: 10

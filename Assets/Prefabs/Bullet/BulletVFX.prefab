@@ -24,6 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5111294828235423281}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1204.184, y: -7.6001472, z: -747.79224}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,7 +33,6 @@ Transform:
   - {fileID: 5115905233446025761}
   - {fileID: 4335728874166745454}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7391379008292770802
 MonoBehaviour:
@@ -52,12 +52,17 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 5111294828235423282}
     m_Modifications:
     - target: {fileID: 1436598810834324859, guid: 6c372ec5cfe60b1479364a721444c89c, type: 3}
       propertyPath: vfx
       value: 
       objectReference: {fileID: 5109420936054445895}
+    - target: {fileID: 1436598810834324859, guid: 6c372ec5cfe60b1479364a721444c89c, type: 3}
+      propertyPath: speed
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 1436598810834324859, guid: 6c372ec5cfe60b1479364a721444c89c, type: 3}
       propertyPath: sphere
       value: 
@@ -111,6 +116,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c372ec5cfe60b1479364a721444c89c, type: 3}
 --- !u!1 &1844257480618981173 stripped
 GameObject:
@@ -127,6 +135,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 5111294828235423282}
     m_Modifications:
     - target: {fileID: 1289377929907018, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
@@ -234,6 +243,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
 --- !u!1 &5109420936054445895 stripped
 GameObject:
