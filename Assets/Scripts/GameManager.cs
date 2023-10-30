@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                if (juegoGanado && juegoPerdido)
+                if (juegoGanado == false && juegoPerdido == false)
                 {
 
                     Pausa();
